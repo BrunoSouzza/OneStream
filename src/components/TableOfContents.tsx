@@ -42,7 +42,7 @@ export function TableOfContents({ items }: TableOfContentsProps) {
   }
 
   return (
-    <aside className="hidden xl:block xl:w-64 xl:shrink-0">
+    <aside className="hidden xl:block xl:w-72 2xl:w-80 xl:shrink-0">
       <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pl-4 pr-2">
         <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
           <List className="h-3.5 w-3.5 text-indigo-500" />

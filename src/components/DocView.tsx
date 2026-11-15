@@ -26,8 +26,8 @@ export function DocView({ doc, prevDoc, nextDoc }: DocViewProps) {
   const pathSegments = doc.relativePath.split("/");
 
   return (
-    <div className="flex flex-1 justify-between px-4 py-8 sm:px-8 lg:px-12">
-      <main className="mx-auto w-full max-w-3xl min-w-0">
+    <div className="flex w-full flex-1 justify-between gap-8 px-4 py-8 sm:px-8 lg:px-12 2xl:px-16">
+      <main className="min-w-0 flex-1 max-w-none">
         {/* Breadcrumb & Repository Path Bar */}
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200/80 bg-slate-50/70 px-3.5 py-2 text-xs text-slate-500 dark:border-slate-800/80 dark:bg-slate-900/50 dark:text-slate-400">
           <div className="flex flex-wrap items-center gap-1.5 font-mono">

@@ -220,7 +220,7 @@ export function TreeSidebar({
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-50 flex w-72 flex-col border-r border-slate-200 bg-white/95 backdrop-blur-md transition-transform duration-200 ease-in-out dark:border-slate-800/80 dark:bg-slate-950/95 lg:sticky lg:top-16 lg:z-20 lg:h-[calc(100vh-4rem)] lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-50 flex w-80 xl:w-[340px] shrink-0 flex-col border-r border-slate-200 bg-white/95 backdrop-blur-md transition-transform duration-200 ease-in-out dark:border-slate-800/80 dark:bg-slate-950/95 lg:sticky lg:top-16 lg:z-20 lg:h-[calc(100vh-4rem)] lg:translate-x-0 ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

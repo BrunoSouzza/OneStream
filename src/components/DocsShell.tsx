@@ -55,8 +55,8 @@ export function DocsShell({ tree, searchIndex, children }: DocsShellProps) {
   return (
     <div className="min-h-screen bg-white text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-100">
       {/* Top Navbar */}
-      <header className="sticky top-0 z-30 h-16 border-b border-slate-200/80 bg-white/85 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-950/85">
-        <div className="mx-auto flex h-full max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6">
+      <header className="sticky top-0 z-30 h-16 w-full border-b border-slate-200/80 bg-white/85 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-950/85">
+        <div className="flex h-full w-full items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <button
               type="button"
@@ -130,7 +130,7 @@ export function DocsShell({ tree, searchIndex, children }: DocsShellProps) {
       </header>
 
       {/* Main Content Layout with TreeView Sidebar */}
-      <div className="mx-auto flex max-w-[1600px]">
+      <div className="flex w-full">
         <TreeSidebar
           tree={tree}
           mobileOpen={mobileOpen}
