@@ -15,6 +15,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { slugifyHeading } from "@/lib/slugify";
+import { ArchitectureBoard } from "./ArchitectureBoard";
 
 function extractTextFromChildren(children: React.ReactNode): string {
   if (typeof children === "string" || typeof children === "number") {
@@ -81,7 +82,13 @@ function CodeBlock({
   );
 }
 
-export function MarkdownRenderer({ content }: { content: string }) {
+export function MarkdownRenderer({
+  content,
+  relativePath,
+}: {
+  content: string;
+  relativePath?: string;
+}) {
   return (
     <div className="prose-docs max-w-none text-slate-700 dark:text-slate-300">
       <ReactMarkdown
@@ -232,13 +239,27 @@ export function MarkdownRenderer({ content }: { content: string }) {
           },
           code: ({ className, children, ...props }) => {
             const match = /language-(\w+)/.exec(className || "");
+            const lang = match ? match[1].toLowerCase() : "";
             const codeString = String(children).replace(/\n$/, "");
             const isMultiline = codeString.includes("\n") || Boolean(match);
+
+            if (
+              lang === "architecture" ||
+              lang === "miro" ||
+              lang === "canvas"
+            ) {
+              return (
+                <ArchitectureBoard
+                  rawCode={codeString}
+                  relativePath={relativePath}
+                />
+              );
+            }
 
             if (isMultiline) {
               return (
                 <CodeBlock
-                  language={match ? match[1] : "text"}
+                  language={lang || "text"}
                   code={codeString}
                 />
               );

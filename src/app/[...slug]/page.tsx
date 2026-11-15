@@ -8,6 +8,8 @@ import {
 } from "@/lib/docs";
 import { DocView } from "@/components/DocView";
 
+export const dynamic = "force-dynamic";
+
 interface PageProps {
   params: {
     slug: string[];

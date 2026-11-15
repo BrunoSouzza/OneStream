@@ -4,6 +4,8 @@ import { siteConfig } from "@/lib/site-config";
 import { getDocsTree, getSearchIndex } from "@/lib/docs";
 import { DocsShell } from "@/components/DocsShell";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,

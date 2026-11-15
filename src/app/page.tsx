@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { getDocBySlug, getDocsTree, flattenTreeFiles } from "@/lib/docs";
 import { DocView } from "@/components/DocView";
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
   const doc = getDocBySlug([]);
   const tree = getDocsTree();
